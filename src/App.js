@@ -7,6 +7,7 @@ import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
