@@ -29,7 +29,7 @@ function CreatePost({ isAuth }) {
   });
 
   return (
-    <div className="createPostPage">
+    <div id="createPostPage">
       <div className="cpContainer">
         <h1>Xx create a post xX</h1>
         <div className="inputGroup">
