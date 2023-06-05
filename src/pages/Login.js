@@ -2,6 +2,7 @@ import { auth, provider } from "../firebase-config";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import "./Login.css";
 
 function Login({ setIsAuth }) {
   let navigate = useNavigate();
@@ -12,6 +13,7 @@ function Login({ setIsAuth }) {
       navigate("/");
     });
   };
+
   return (
     <div className="loginPage">
       <p>Sign in with Google..</p>

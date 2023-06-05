@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -26,13 +26,15 @@ function App() {
         {!isAuth ? (
           <Link to="/login">Login Xx</Link>
         ) : (
-          <button onClick={signUserOut}>Log Out xx</button>
+          <button className="login-with-google-btn" onClick={signUserOut}>
+            Log Out Xx
+          </button>
         )}
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
-        <Route path="/createpost" element={<CreatePost />} />
+        <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
       </Routes>
     </Router>
   );
