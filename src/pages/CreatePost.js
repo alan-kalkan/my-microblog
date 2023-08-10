@@ -1,4 +1,3 @@
-import "./CreatePost.css";
 import React, { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore"; // pour ajouter un document a ma table sur firestore
 import { db, auth } from "../firebase-config";
