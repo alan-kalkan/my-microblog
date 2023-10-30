@@ -30,7 +30,7 @@ function CreatePost({ isAuth }) {
   return (
     <div id="createPostPage">
       <div className="cpContainer">
-        <h1>Xx create a post xX</h1>
+        <h1>Create a post</h1>
         <div className="inputGroup">
           <label> Tittle:</label>
           <input
@@ -49,7 +49,7 @@ function CreatePost({ isAuth }) {
             }}
           />
         </div>
-        <button onClick={createPost}>Submit post!!!</button>
+        <button onClick={createPost}>Submit post !</button>
       </div>
     </div>
   );
